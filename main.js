@@ -11,7 +11,7 @@ function getComputerChoice() {
      let ans = prompt("choose ur pick rock, paper or scissor").toLowerCase()
 
      if (ans === "rock" || ans === "paper" || ans === "scissor") {
-    alert("you choose " + ans)
+    alert("you choose " + ans.at(0).toUpperCase() + ans.slice(1))
 }   else {
     alert("Invalid input, please only choose between rock, paper or scissor")
 }
@@ -57,9 +57,7 @@ function playRound (humanChoice, computerChoice) {
         alert('You have a score of '+humanScore+ ' and computer has a score of ' + computerScore)
     }
     
-};
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+}
 
 
 
@@ -68,10 +66,17 @@ function playGame () {
     // making the scoreboard
     humanScore = 0
     computerScore = 0
-
+    
     // looping the fucntion for 5 times
     for (let i=0; i <= 4; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
         playRound(humanSelection,computerSelection)
+    }
+    if (humanScore > computerScore) {
+        alert("Congratulations you won!")
+    } else {
+        alert("The computer won better luck next time!")
     }
 }
 
