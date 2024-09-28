@@ -1,4 +1,4 @@
-// make a list of them and add it to game variable
+
 game = ["rock","paper","scissor"]
 
 // let the  computer choose between a random item from the game list
@@ -6,24 +6,25 @@ function getComputerChoice() {
     return game.at(Math.floor(Math.random() * 3))
 }
 
-// let the user choose between rock, paper or scisso
-let getHumanChoice = prompt("choose ur pick rock, paper or scissor").toLowerCase()
+// let the user choose between rock, paper or scissor
+ function getHumanChoice() {
+     let ans = prompt("choose ur pick rock, paper or scissor").toLowerCase()
 
-if (getHumanChoice === "rock" || getHumanChoice === "paper" || getHumanChoice === "scissor") {
-    alert("you choose " + getHumanChoice)
+     if (ans === "rock" || ans === "paper" || ans === "scissor") {
+    alert("you choose " + ans)
 }   else {
     alert("Invalid input, please only choose between rock, paper or scissor")
 }
+    return ans
+}
 
-// making the scoreboard
-humanScore = 0
-computerScore = 0
-
-// making the game rules
+// making the game rule
 function playRound (humanChoice, computerChoice) {
+
+
     if (humanChoice === computerChoice) {
         alert("Its a tie")
-        alert('You have a score of ' + humanScore + 'and computer has a score of '+computerScore)
+        alert('You have a score of ' + humanScore +' and computer has a score of '+computerScore)
     }
     else if (humanChoice === "rock" && computerChoice == "paper") {
         alert("You lose! Computer choose paper and paper beats rock")
@@ -56,10 +57,22 @@ function playRound (humanChoice, computerChoice) {
         alert('You have a score of '+humanScore+ ' and computer has a score of ' + computerScore)
     }
     
-} 
-const humanSelection = getHumanChoice;
+};
+const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection,computerSelection);
 
 
+function playGame () {
+    
+    // making the scoreboard
+    humanScore = 0
+    computerScore = 0
+
+    // looping the fucntion for 5 times
+    for (let i=0; i <= 4; i++) {
+        playRound(humanSelection,computerSelection)
+    }
+}
+
+playGame()
