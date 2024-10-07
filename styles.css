@@ -1,0 +1,9 @@
+.buttons {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}
