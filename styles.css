@@ -1,9 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto','serif';
+}
+
 .buttons {
     display: flex;
-    gap: 4px;
+    gap: 8px;
     justify-content: center;
 }
 h2 {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
 }
+button {
+    /* height: 60px;
+    width: 80px; */
+    font-size: 2em;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 3px;
+    margin-bottom: 20px;
+    margin-right: 300px;
+    margin-left: 300px;
+    /* border: 2px solid grey;
+    background-color: blue; */
+    /* background-color: rgb(194, 60, 60);
+    background-color: rgb(82, 206, 82); */
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
