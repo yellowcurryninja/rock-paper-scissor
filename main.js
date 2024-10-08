@@ -79,7 +79,7 @@ rock.addEventListener("click",(e)=> {
     const computerSelection = getComputerChoice();
     playRound(humanSelection,computerSelection)
     const body = document.querySelector("body")
-
+    
     if (humanScore === 5) {
         body.textContent = ''
         const h1 = document.createElement("h1")
@@ -97,7 +97,8 @@ rock.addEventListener("click",(e)=> {
 paper.addEventListener("click",(e)=> {
     
     humanSelection = "paper"
-
+    
+    const body = document.querySelector("body")
     const computerSelection = getComputerChoice();
     playRound(humanSelection,computerSelection)
     
@@ -107,10 +108,10 @@ paper.addEventListener("click",(e)=> {
             h1.textContent = `Congratulations you have won the game!`
             body.appendChild(h1)
     } else if (computerScore === 5) {
-            body.textContent = ''
-            const h1 = document.createElement("h1")
-            h1.textContent = `Computer has won the game, better luck next time!`
-            body.appendChild(h1)
+        body.textContent = ''
+        const h1 = document.createElement("h1")
+        h1.textContent = `Computer has won the game, better luck next time!`
+        body.appendChild(h1)
     }
 })
 
@@ -118,9 +119,10 @@ paper.addEventListener("click",(e)=> {
 scissor.addEventListener("click",(e)=> {
     
     humanSelection = "scissor"
-      
+    
     const computerSelection = getComputerChoice();
     playRound(humanSelection,computerSelection)
+    const body = document.querySelector("body")
     
     if (humanScore === 5) {
             body.textContent = ''
